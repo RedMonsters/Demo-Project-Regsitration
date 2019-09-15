@@ -1,7 +1,7 @@
 node {
    stage('Code checkout') {
-   
-          git credentialsId: 'gitcred', url: 'https://github.com/RedMonsters/registration-login-spring-xml-maven-jsp-mysql.git'
+      echo 'Checout Code and clone it inside jenkins workspace.'
+        git 'https://github.com/RedMonsters/registration-login-spring-xml-maven-jsp-mysql.git'          
      }
  stage('Build') {
      withMaven(jdk: 'Java', maven: 'Maven')  {
