@@ -7,10 +7,12 @@ node {
      withMaven(jdk: 'Java', maven: 'Maven')  {
       sh 'mvn clean compile'
      } 
+ }
  stage('Test') {
      withMaven(jdk: 'Java', maven: 'Maven') {
       sh 'mvn test'
      }  
+ } 
  // stage('Sonar CodeAnalysis') {
    //  withSonarQubeEnv(credentialsId: 'sonar') { 
       // sh 'mvn clean verify sonar:sonar'
@@ -19,6 +21,7 @@ node {
     withMaven(jdk: 'java', maven: 'Maven') {
       sh 'mvn package'
      } 
+  }
  stage('Artifactory') {
      
    }
