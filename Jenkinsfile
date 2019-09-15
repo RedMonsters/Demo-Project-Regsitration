@@ -13,10 +13,11 @@ node {
       sh 'mvn test'
      }  
  } 
- // stage('Sonar CodeAnalysis') {
-   //  withSonarQubeEnv(credentialsId: 'sonar') { 
-      // sh 'mvn clean verify sonar:sonar'
-     //     }
+ stage('Sonar CodeAnalysis') {
+     withSonarQubeEnv(credentialsId: 'sonarsecret') { 
+      sh 'mvn clean verify sonar:sonar'
+        }
+ }
   stage('Package') {
     withMaven(jdk: 'Java', maven: 'Maven') {
       sh 'mvn package'
