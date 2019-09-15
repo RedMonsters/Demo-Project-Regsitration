@@ -14,9 +14,9 @@ node {
      }  
  } 
  stage('SonarScan') {
-      //withSonarQubeEnv('SonarQube') {
+     withSonarQubeEnv(credentialsId: 'SatyaSaiPavanKumar'){
          withMaven(jdk: 'Java', maven: 'Maven') {
-             //sh 'mvn clean package sonar:sonar' 
+            sh 'mvn clean package sonar:sonar' 
              sh 'mvn clean verify sonar:sonar ' +
              ' -Dsonar.host.url=https://sonarcloud.io ' +
              ' -Dsonar.organization=redmonsters '+ 
