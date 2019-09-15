@@ -13,10 +13,15 @@ node {
       sh 'mvn test'
      }  
  } 
- stage('Sonar CodeAnalysis') {
-     withSonarQubeEnv(credentialsId: 'sonarsecret') { 
-      sh 'mvn clean verify sonar:sonar'
-        }
+ stage('SonarScan') {
+      //withSonarQubeEnv('SonarQube') {
+         withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
+             //sh 'mvn clean package sonar:sonar' 
+             sh 'mvn clean verify sonar:sonar ' +
+             ' -Dsonar.host.url=https://sonarcloud.io ' +
+             ' -Dsonar.organization=RedMonsters '+ 
+             ' -Dsonar.login=22093b89240fb40d4e91ed86b830455791415750 ' +
+             ' -Dsonar.links.ci='
  }
   stage('Package') {
     withMaven(jdk: 'Java', maven: 'Maven') {
