@@ -22,6 +22,7 @@ node {
              ' -Dsonar.organization=RedMonsters '+ 
              ' -Dsonar.login=22093b89240fb40d4e91ed86b830455791415750 ' +
              ' -Dsonar.links.ci='
+             }
  }
   stage('Package') {
     withMaven(jdk: 'Java', maven: 'Maven') {
