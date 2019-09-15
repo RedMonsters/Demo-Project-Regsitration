@@ -20,7 +20,7 @@ node {
              sh 'mvn clean verify sonar:sonar ' +
              ' -Dsonar.host.url=https://sonarcloud.io ' +
              ' -Dsonar.organization=redmonsters '+ 
-             ' -Dsonar.login=22093b89240fb40d4e91ed86b830455791415750 ' +
+             ' -Dsonar.login=8120bdc0fdf10655bbb351212a73ede8761bf477 ' +
              ' -Dsonar.links.ci='
              }
  }
