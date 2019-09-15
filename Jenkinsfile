@@ -23,6 +23,7 @@ node {
              ' -Dsonar.login=8120bdc0fdf10655bbb351212a73ede8761bf477 ' +
              ' -Dsonar.links.ci='
              }
+      }
  }
   stage('Package') {
     withMaven(jdk: 'Java', maven: 'Maven') {
