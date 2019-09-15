@@ -18,7 +18,7 @@ node {
       // sh 'mvn clean verify sonar:sonar'
      //     }
   stage('Package') {
-    withMaven(jdk: 'java', maven: 'Maven') {
+    withMaven(jdk: 'Java', maven: 'Maven') {
       sh 'mvn package'
      } 
   }
