@@ -15,7 +15,7 @@ node {
  } 
  stage('SonarScan') {
       //withSonarQubeEnv('SonarQube') {
-         withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
+         withMaven(jdk: 'Java', maven: 'Maven') {
              //sh 'mvn clean package sonar:sonar' 
              sh 'mvn clean verify sonar:sonar ' +
              ' -Dsonar.host.url=https://sonarcloud.io ' +
