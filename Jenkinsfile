@@ -14,7 +14,7 @@ node {
      }  
  } 
  stage('SonarScan') {
-     //withSonarQubeEnv(credentialsId: 'SatyaSaiPavanKumar'){
+     withSonarQubeEnv(credentialsId: 'SatyaSaiPavanKumar'){
          withMaven(jdk: 'Java', maven: 'Maven') {
           //  sh 'mvn clean package sonar:sonar' 
              sh 'mvn clean verify sonar:sonar ' +
@@ -22,7 +22,7 @@ node {
              ' -Dsonar.organization=redmonsters '+ 
              ' -Dsonar.login=8120bdc0fdf10655bbb351212a73ede8761bf477 '
              ' -Dsonar.links.ci='
-            // }
+            }
       }
  }
   stage('Package') {
