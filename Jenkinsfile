@@ -19,7 +19,7 @@ node {
           //  sh 'mvn clean package sonar:sonar' 
              sh 'mvn clean verify sonar:sonar ' +
              ' -Dsonar.host.url=https://sonarcloud.io ' +
-             ' -Dsonar.organization=redmonsters-github '+ 
+             ' -Dsonar.organization=redmonsters '+ 
              ' -Dsonar.login=8120bdc0fdf10655bbb351212a73ede8761bf477 '
              ' -Dsonar.links.ci='
             // }
