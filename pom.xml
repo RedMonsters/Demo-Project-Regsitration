@@ -113,26 +113,7 @@
           </plugins>
         </pluginManagement>
              
-        <plugins>
-          <plugin>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>prepare-agent</goal>
-                </goals>
-              </execution>
-              <execution>
-                <id>report</id>
-                <goals>
-                  <goal>report</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins> 
-             
+        
         <plugins>
             <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
