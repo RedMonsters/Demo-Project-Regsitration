@@ -1,7 +1,6 @@
 node {
    stage('Code checkout') {
-      echo 'Checout Code and clone it inside jenkins workspace.'
-        git 'https://github.com/RedMonsters/registration-login-spring-xml-maven-jsp-mysql.git'          
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitcred', url: 'https://github.com/RedMonsters/registration-login-spring-xml-maven-jsp-mysql.git']]])          
      }
  stage('Build') {
      withMaven(jdk: 'Java', maven: 'Maven')  {
