@@ -1,4 +1,9 @@
 node {
+   
+   def server = Artifactory.server('satyasai.jfrog.io')
+   def buildInfo = Artifactory.newBuildInfo()
+   def rtMaven = Artifactory.newMavenBuild()
+   
    stage('Code checkout') {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitcred', url: 'https://github.com/RedMonsters/registration-login-spring-xml-maven-jsp-mysql.git']]])          
      }
@@ -12,6 +17,11 @@ node {
       sh 'mvn test'
      }  
  } 
+   
+   stage ('Unit Test') {
+        rtMaven.tool = 'Maven-3.6.0' // Tool name from Jenkins configuration
+        rtMaven.run pom: 'pom.xml', goals: 'clean compile test'
+    }
  stage('SonarScan') {
      withSonarQubeEnv(credentialsId: 'SatyaSaiPavanKumar'){
          withMaven(jdk: 'Java', maven: 'Maven') {
