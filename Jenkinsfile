@@ -46,7 +46,7 @@ node {
         rtMaven.tool = 'Maven' // Tool name from Jenkins configuration
         rtMaven.deployer releaseRepo: 'ajitkatta-artifactory-primary-0-releases-local', snapshotRepo: 'ajitkatta-artifactory-primary-0-snapshots-local', server: server
         rtMaven.resolver releaseRepo: 'ajitkatta-artifactory-primary-0-releases', snapshotRepo: 'ajitkatta-artifactory-primary-0-snapshots', server: server
-        rtMaven.deployer.deployArtifacts = false // Disable artifacts deployment during Maven run
+        rtMaven.deployer.deployArtifacts = true // Disable artifacts deployment during Maven run
      }
    
     //stage ('Install') {
