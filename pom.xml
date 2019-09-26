@@ -119,9 +119,6 @@
              <version>3.0.0-M1</version>
              <type>maven-plugin</type>
         </dependency>
-        <dependency org="org.apache.maven.plugins" name="maven-install-plugin" rev="3.0.0-M1">
-             <artifact name="maven-install-plugin" type="maven-plugin" />
-        </dependency>
     </dependencies>
     <distributionManagement>
            <repository>
