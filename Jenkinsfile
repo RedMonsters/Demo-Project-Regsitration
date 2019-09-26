@@ -48,11 +48,20 @@ node {
         rtMaven.resolver releaseRepo: 'libs-release', snapshotRepo: 'libs-snapshot', server: server
         rtMaven.deployer.deployArtifacts = false // Disable artifacts deployment during Maven run
      }
-    stage ('Install', 'Deploy','Publish build info') {
+   
+    stage ('Install') {
         rtMaven.run pom: 'pom.xml', goals: 'install', buildInfo: buildInfo
+     }
+ 
+    stage ('Deploy') {
         rtMaven.deployer.deployArtifacts buildInfo
+    }
+        
+    stage ('Publish build info') {
         server.publishBuildInfo buildInfo
     }
+    
+    
    stage('Docker Build') {
      
    }
