@@ -101,7 +101,6 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
-        <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
