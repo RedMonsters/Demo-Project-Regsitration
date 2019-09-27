@@ -55,7 +55,7 @@ node {
     // }
  
     stage ('Deploy') {
-        rtMaven.deployer.deployArtifacts REDMONSTERS
+        rtMaven.deployer.deployArtifacts buildInfo
     }
         
     stage ('Publish build info') {
