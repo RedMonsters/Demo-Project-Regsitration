@@ -49,7 +49,7 @@ node {
      }
    
    stage ('Install') {
-           rtMaven.run pom: 'pom.xml', goals: 'clean install', buildInfo: buildInfo
+           rtMaven.run pom: 'pom.xml', goals: 'clean install -U', buildInfo: buildInfo
      }
  
     stage ('Deploy') {
