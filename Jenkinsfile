@@ -3,7 +3,7 @@ node {
    def server = Artifactory.server('ajitkatta.jfrog.io')
    def buildInfo = Artifactory.newBuildInfo()
    def rtMaven = Artifactory.newMavenBuild()
-   def REDMONSTERS =  Artifactory.newMavenBuild()
+   
    
    stage('Code checkout') {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitcred', url: 'https://github.com/RedMonsters/registration-login-spring-xml-maven-jsp-mysql.git']]])          
@@ -59,7 +59,7 @@ node {
     }
         
     stage ('Publish build info') {
-        server.publishBuildInfo REDMONSTERS
+        server.publishBuildInfo buildInfo
     }
     
     
