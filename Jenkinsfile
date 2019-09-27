@@ -32,7 +32,7 @@ node {
              ' -Dsonar.organization=redmonsters '  + 
              ' -Dsonar.login=c12567b670f2e3d95752ed609ad85a0455aa927e ' +
              ' -Dsonar.projectKey=redmonsters ' +
-             ' -Dsonar.links.ci='
+            // ' -Dsonar.links.ci='
             }
       }
  }
