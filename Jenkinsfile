@@ -50,9 +50,9 @@ node {
         rtMaven.deployer.deployArtifacts = true // Disable artifacts deployment during Maven run
      }
    
-    stage ('Install') {
-        rtMaven.run pom: 'pom.xml', goals: 'install', buildInfo: buildInfo
-     }
+   // stage ('Install') {
+    //    rtMaven.run pom: 'pom.xml', goals: 'install', buildInfo: buildInfo
+    // }
  
     stage ('Deploy') {
         rtMaven.deployer.deployArtifacts REDMONSTERS
