@@ -28,7 +28,18 @@
         <sonar.groovy.binaries>target/classes</sonar.groovy.binaries>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+    <settings>
+       ...
+       <mirrors>
+         <mirror>
+           <id>UK</id>
+           <name>UK Central</name>
+           <url>http://uk.maven.org/maven2</url>
+           <mirrorOf>central</mirrorOf>
+         </mirror>
+       </mirrors>
+       ...
+    </settings>
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
