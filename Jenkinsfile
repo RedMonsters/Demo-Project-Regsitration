@@ -47,7 +47,7 @@ node {
         rtMaven.resolver server: server, releaseRepo: 'libs-release', snapshotRepo: 'libs-snapshot'
         rtMaven.deployer.deployArtifacts = false // Disable artifacts deployment during Maven run
         rtMaven.deployer.artifactDeploymentPatterns.addInclude("*-common-*")
-        rtMaven.run pom: 'pom.xml', goals: 'clean package'
+        rtMaven.run pom: 'pom.xml', goals: ' package -U'
    
      }
    
