@@ -118,18 +118,18 @@
         </dependency>
            
     </dependencies>
-    <distributionManagement>
-           <repository>
-              <id>central</id>
-              <name>ajitkatta-artifactory-primary-0-releases</name>
-              <url>https://ajitkatta.jfrog.io/ajitkatta/RedMonsters</url>
-           </repository>
-           <snapshotRepository>
-              <id>snapshots</id>
-              <name>ajitkatta-artifactory-primary-0-snapshots</name>
-              <url>https://ajitkatta.jfrog.io/ajitkatta/RedMonsters</url>
-           </snapshotRepository>
-    </distributionManagement> 
+   <distributionManagement>
+     <repository>
+         <id>central</id>
+         <name>ajitkatta-artifactory-primary-0-releases</name>
+         <url>https://ajitkatta.jfrog.io/ajitkatta/libs-release</url>
+     </repository>
+     <snapshotRepository>
+         <id>snapshots</id>
+         <name>ajitkatta-artifactory-primary-0-snapshots</name>
+         <url>https://ajitkatta.jfrog.io/ajitkatta/libs-release</url>
+     </snapshotRepository>
+   </distributionManagement>
     <build>
         <pluginManagement>
             <plugins>
