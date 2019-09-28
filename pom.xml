@@ -102,6 +102,7 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
+       
         <dependency>
              <groupId>org.apache.maven.plugins</groupId>
              <artifactId>maven-clean-plugin</artifactId>
