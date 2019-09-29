@@ -25,6 +25,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <sonar.groovy.binaries>target/classes</sonar.groovy.binaries>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven-compiler-plugin-version>2.3.2</maven-compiler-plugin-version>
     </properties>
        
      <dependencies>
@@ -104,18 +105,23 @@
         <dependency>
              <groupId>org.apache.maven.plugins</groupId>
              <artifactId>maven-clean-plugin</artifactId>
-             <version>3.1.0</version>
+             <version>3.6.0</version>
              <type>maven-plugin</type>
         </dependency>
         
         <dependency>
              <groupId>org.apache.maven.plugins</groupId>
              <artifactId>maven-install-plugin</artifactId>
-             <version>3.0.0-M1</version>
+             <version>3.6.0</version>
              <type>maven-plugin</type>
         </dependency>
-           
-    </dependencies>
+     
+        <dependency>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-compiler-plugin</artifactId>
+             <version>3.6.1</version>
+        </dependency>      
+     </dependencies>
    <distributionManagement>
      <repository>
          <id>central</id>
@@ -154,8 +160,17 @@
               <plugin>   
                   <artifactId>maven-resources-plugin</artifactId>
                   <version>2.7</version>
-              </plugin>           
+              </plugin>
+              <plugin>
+                  <artifactId>maven-compiler-plugin</artifactId>
+                  <version>3.6.1</version>
+                  <configuration>
+                      <source />
+                      <target />
+                  </configuration>
+              </plugin>       
             </plugins> 
+            
         </pluginManagement>
               
         <plugins>
