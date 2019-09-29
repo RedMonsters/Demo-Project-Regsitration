@@ -1,16 +1,16 @@
 #Use an official Python runtime as a parent image
-FROM madhupk/python-newrelic:latest
+FROM docker pull phusion/baseimage
 
-MAINTAINER madhupk
+MAINTAINER satyasaipavan
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR home/ubuntu/Docker
 
 # Copy the current directory contents into the container at /app
-ADD . /app
+ADD . home/ubuntu/Docker
 
 # Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt
+CMD ["mvn", "param1", "param2"?]
 
 # Install python newrelic agent on this docker image
 #RUN pip install newrelic ( to avoid this layer, added newrelic inside requirement.txt)
@@ -19,10 +19,10 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # Define environment variable
-ENV NAME ITRAIN-BATMAN
+ENV NAME Redmonsters
 
 #When you launch the container, it runs the script and then exits
-ENTRYPOINT ["newrelic-admin", "run-program"]
+ENTRYPOINT ["", "run-program"]
 
 #Default environment variables
 ENV NEW_RELIC_LOG=stderr \
