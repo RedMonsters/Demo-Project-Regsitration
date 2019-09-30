@@ -120,7 +120,20 @@
              <groupId>org.apache.maven.plugins</groupId>
              <artifactId>maven-compiler-plugin</artifactId>
              <version>3.6.0</version>
-        </dependency>      
+        </dependency>    
+        
+        <dependency>
+             <groupId>org.apache.maven</groupId>
+             <artifactId>maven-plugin-api</artifactId>
+             <version>3.6.0</version>
+        </dependency>
+        
+        <dependency>
+             <groupId>org.apache.maven</groupId>
+             <artifactId>maven-artifact</artifactId>
+             <version>3.6.0</version>
+        </dependency>
+
      </dependencies>
    <distributionManagement>
      <repository>
@@ -145,21 +158,21 @@
               <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-source-plugin</artifactId>
-                  <version>2.1</version>
+                  <version>3.1.0</version>
               </plugin>
               <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-war-plugin</artifactId>
-                  <version>2.1</version>
+                  <version>3.2.3</version>
               </plugin>
               <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-jar-plugin</artifactId>
-                  <version>2.1</version>
+                  <version>3.1.2</version>
               </plugin>
               <plugin>   
                   <artifactId>maven-resources-plugin</artifactId>
-                  <version>2.1</version>
+                  <version>3.1.0</version>
               </plugin>
               <plugin>
                   <artifactId>maven-compiler-plugin</artifactId>
@@ -177,7 +190,7 @@
             <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-compiler-plugin</artifactId>
-                  <version>3.6.0</version>
+                  <version>3.8.1</version>
                   <configuration>
                       <source>1.8</source>
                       <target>1.8</target>
@@ -240,7 +253,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.2.3</version>
                 <configuration>
                     <archive>
                         <addMavenDescriptor>true</addMavenDescriptor>
