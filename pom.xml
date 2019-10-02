@@ -153,36 +153,7 @@
            <name>ajitkatta-artifactory-primary-0-snapshots</name>
            <url>https://ajitkatta.jfrog.io/ajitkatta/libs-release</url>
        </snapshotRepository>
-       <repository>
-           <id>central</id>
-           <name>ajitkatta-artifactory-primary-0-releases</name>
-           <url>https://ajitkatta.jfrog.io/ajitkatta/libs-release-local</url>
-       </repository>
-       <snapshotRepository>
-           <id>snapshots</id>
-           <name>ajitkatta-artifactory-primary-0-snapshots</name>
-           <url>https://ajitkatta.jfrog.io/ajitkatta/libs-release-local</url>
-       </snapshotRepository>
-       <repository>
-           <id>central</id>
-           <name>ajitkatta-artifactory-primary-0-releases</name>
-           <url>https://ajitkatta.jfrog.io/ajitkatta/libs-snapshot</url>
-       </repository>
-       <snapshotRepository>
-           <id>snapshots</id>
-           <name>ajitkatta-artifactory-primary-0-snapshots</name>
-           <url>https://ajitkatta.jfrog.io/ajitkatta/libs-snapshot</url>
-       </snapshotRepository>
-       <repository>
-           <id>central</id>
-           <name>ajitkatta-artifactory-primary-0-releases</name>
-           <url>https://ajitkatta.jfrog.io/ajitkatta/libs-snapshot-local</url>
-       </repository>
-       <snapshotRepository>
-           <id>snapshots</id>
-           <name>ajitkatta-artifactory-primary-0-snapshots</name>
-           <url>https://ajitkatta.jfrog.io/ajitkatta/libs-snapshot-local</url>
-       </snapshotRepository>
+     
      </distributionManagement>
          
     <build>
