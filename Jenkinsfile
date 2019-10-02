@@ -50,7 +50,7 @@ node {
      }
    
    stage ('install') {
-             rtMaven.run pom: 'pom.xml', goals: 'install', buildInfo: buildInfo
+             rtMaven.run pom: 'pom.xml', goals: 'install -Dmaven.repo.local=.m2', buildInfo: buildInfo
     }      
    
     stage ('Deploy') {
