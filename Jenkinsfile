@@ -49,7 +49,7 @@ node {
        
      }
    
-   stage ('install) {
+   stage ('install') {
              rtMaven.run pom: 'pom.xml', goals: 'install', buildInfo: buildInfo
     }      
    
