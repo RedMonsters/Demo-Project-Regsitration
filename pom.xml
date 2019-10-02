@@ -288,23 +288,41 @@
           </plugins>
       </build>
       <repositories>
-         <repository>
-             <snapshots>
-                 <enabled>false</enabled>
-             </snapshots>
-             <id>central</id>
-             <name>bintray</name>
-             <url>https://jcenter.bintray.com</url>
-         </repository>
+        <repository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>libs-release</name>
+          <url>https://ajitkatta.jfrog.io/ajitkatta/libs-release</url>
+        </repository>
+        <repository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>libs-snapshot</name>
+          <url>https://ajitkatta.jfrog.io/ajitkatta/libs-snapshot</url>
+        </repository>
       </repositories>
       <pluginRepositories>
-         <pluginRepository>
-             <snapshots>
-                 <enabled>false</enabled>
-             </snapshots>
-             <id>central</id>
-             <name>bintray-plugins</name>
-             <url>https://jcenter.bintray.com</url>
-         </pluginRepository>
+        <pluginRepository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>libs-release</name>
+          <url>https://ajitkatta.jfrog.io/ajitkatta/libs-release</url>
+        </pluginRepository>
+        <pluginRepository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>libs-snapshot</name>
+          <url>https://ajitkatta.jfrog.io/ajitkatta/libs-snapshot</url>
+        </pluginRepository>
       </pluginRepositories>
+      <id>artifactory</id>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>artifactory</activeProfile>
+  </activeProfiles>
   </project>
