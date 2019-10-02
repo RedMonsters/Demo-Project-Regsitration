@@ -50,7 +50,7 @@ node {
      }
    
    stage ('install') {
-             rtMaven.run pom: 'pom.xml', goals: 'clean install -Dmaven.repo.local=.m2'
+             rtMaven.run pom: 'pom.xml', goals: 'package -Dmaven.repo.local=.m2'
     }      
    
     stage ('Deploy') {
