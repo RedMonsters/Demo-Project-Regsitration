@@ -149,6 +149,7 @@
      </snapshotRepository>
    </distributionManagement>
     <build>
+        <defaultGoal>install</defaultGoal>
         <pluginManagement>
             <plugins>
               <plugin>
