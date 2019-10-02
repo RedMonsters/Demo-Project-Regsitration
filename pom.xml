@@ -133,7 +133,12 @@
              <artifactId>maven-artifact</artifactId>
              <version>3.6.0</version>
         </dependency>
-    
+        
+        <dependency>
+             <groupId>org.jfrog.buildinfo</groupId>
+             <artifactId>artifactory-maven-plugin</artifactId>
+             <version>2.6.1</version>
+        </dependency>
               
      </dependencies>
    <distributionManagement>
