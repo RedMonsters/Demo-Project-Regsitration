@@ -44,7 +44,7 @@ node {
          
         rtMaven.tool = 'Maven' // Tool name from Jenkins configuration
         rtMaven.deployer server: server, releaseRepo: 'libs-release-local', snapshotRepo: 'libs-snapshot-local'
-        rtMaven.resolver server: server, releaseRepo: 'libs-release', snapshotRepo: 'libs-snapshot'
+        rtMaven.resolver server: server, releaseRepo: 'libs-release-local', snapshotRepo: 'libs-snapshot-local'
         rtMaven.deployer.deployArtifacts = true // Disable artifacts deployment during Maven run
         rtMaven.run pom: 'pom.xml', goals: 'install', buildInfo: buildInfo
    
