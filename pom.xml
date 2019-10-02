@@ -319,10 +319,5 @@
           <url>https://ajitkatta.jfrog.io/ajitkatta/libs-snapshot</url>
         </pluginRepository>
       </pluginRepositories>
-      <id>artifactory</id>
-    </profile>
-  </profiles>
-  <activeProfiles>
-    <activeProfile>artifactory</activeProfile>
-  </activeProfiles>
+      
   </project>
