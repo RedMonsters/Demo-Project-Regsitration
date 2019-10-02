@@ -240,7 +240,7 @@
                 <version>3.1.2</version>
                 <configuration>
                     <archive>
-                        <addMavenDescriptor>true</addMavenDescriptor>
+                        <addMavenDescriptor>false</addMavenDescriptor>
                     </archive>
                 </configuration>
             </plugin>
@@ -277,10 +277,30 @@
                 <version>3.2.3</version>
                 <configuration>
                     <archive>
-                        <addMavenDescriptor>true</addMavenDescriptor>
+                        <addMavenDescriptor>false</addMavenDescriptor>
                     </archive>
                 </configuration>
             </plugin>
           </plugins>
       </build>
+      <repositories>
+         <repository>
+             <snapshots>
+                 <enabled>false</enabled>
+             </snapshots>
+             <id>central</id>
+             <name>bintray</name>
+             <url>https://jcenter.bintray.com</url>
+         </repository>
+      </repositories>
+      <pluginRepositories>
+         <pluginRepository>
+             <snapshots>
+                 <enabled>false</enabled>
+             </snapshots>
+             <id>central</id>
+             <name>bintray-plugins</name>
+             <url>https://jcenter.bintray.com</url>
+         </pluginRepository>
+      </pluginRepositories>
   </project>
