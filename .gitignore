@@ -1,7 +1,9 @@
 .idea
 *.iml
-target
+/target
 *.DS_Store
 *.md
 license
-settings.xml
+/settings
+.CLASSPATH
+.PROJECT
