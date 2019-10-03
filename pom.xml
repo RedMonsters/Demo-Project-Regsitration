@@ -323,7 +323,7 @@
           <id>central</id>
           <name>libs-release</name>
           <url>https://ajitkatta.jfrog.io/ajitkatta/libs-release</url>
-       <repositories>
+       </repository>
         <repository>
           <snapshots>
             <enabled>false</enabled>
