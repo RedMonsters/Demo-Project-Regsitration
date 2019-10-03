@@ -41,6 +41,7 @@ stage('SonarScan') {
                   error "Pipeline aborted due to quality gate failure: ${qg.status}"
               }
           }
+   }
   stage('Package') {
     withMaven(jdk: 'Java', maven: 'Maven') {
       sh 'mvn package'
