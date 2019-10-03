@@ -322,14 +322,6 @@
           </snapshots>
           <id>central</id>
           <name>libs-release</name>
-          <url>https://ajitkatta.jfrog.io/ajitkatta/libs-release</url>
-       </repository>
-        <repository>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-          <id>central</id>
-          <name>libs-release</name>
           <url>https://satyasaipavan.jfrog.io/satyasaipavan/libs-release</url>
         </repository>
         <repository>
