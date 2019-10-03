@@ -25,7 +25,7 @@ stage('SonarScan') {
    withSonarQubeEnv(credentialsId: 'SatyaSaiPavanKumar'){
      withMaven(jdk: 'Java', maven: 'Maven') {
       sh 'mvn clean package -Dmaven.repo.local=.m2 sonar:sonar' 
-      sh 'mvn clean verify -Dmaven.repo.local=.m2 sonar:sonar ' +
+      sh 'mvn clean verify sonar:sonar ' +
              ' -Dsonar.host.url=https://sonarcloud.io ' +
              ' -Dsonar.organization=redmonsters '  + 
           ' -Dsonar.login=c12567b670f2e3d95752ed609ad85a0455aa927e ' +
