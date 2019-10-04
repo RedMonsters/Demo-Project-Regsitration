@@ -25,7 +25,7 @@ stage('SonarScan') {
    withSonarQubeEnv(credentialsId: 'SatyaSaiPavanKumar'){
      withMaven(jdk: 'Java', maven: 'Maven') {
     //  sh 'mvn clean package sonar:sonar' 
-   sh ' mvn clean package sonar:sonar '+
+   sh ' mvn clean verify sonar:sonar '+
              ' -Dsonar.host.url=https://sonarcloud.io ' +
              ' -Dsonar.organization=redmonsters '  + 
           ' -Dsonar.login=c12567b670f2e3d95752ed609ad85a0455aa927e ' +
@@ -71,16 +71,22 @@ stage('SonarScan') {
     
     
    stage('Docker Build') {
-     
+      def app = docker.build "satyasaipavan/Registration"     
    }
+   stage('push Docker Image ro Hub){
+         withDockerRegistry(credentialsId: 'Docker-hub', toolName: 'Docker', url: 'https://cloud.docker.com') {
+            add.push("${env.BUILD_NUMBER}")
+            add.push("latest")
+         }
+     }
    
-   stage('Deploy to Dev') {
+ //  stage('Deploy to Dev') {
      
-   }
-   stage('Deploy to Stage') {
+   //}
+   //stage('Deploy to Stage') {
      
-   }
-   stage('Deploy to Prod') {
+   //}
+  // stage('Deploy to Prod') {
      
-   }
+  // }
 }
