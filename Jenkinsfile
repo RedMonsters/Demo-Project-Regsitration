@@ -74,7 +74,7 @@ stage('SonarScan') {
       def app = docker.build "satyasaipavan/Registration"     
    }
   
-   stage('push DockerImage to Hub) {
+   stage('push DockerImage to Hub') {
          withDockerRegistry(credentialsId: 'Docker-hub', toolName: 'Docker', url: 'https://cloud.docker.com'){
             add.push("${env.BUILD_NUMBER}")
             add.push("latest")
