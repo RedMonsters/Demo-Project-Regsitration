@@ -3,8 +3,6 @@
 /target
 *.DS_Store
 *.md
-license
-/settings
-.CLASSPATH
-.PROJECT
-/webapp
+
+
+
