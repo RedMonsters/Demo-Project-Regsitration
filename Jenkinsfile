@@ -24,7 +24,7 @@ node {
 stage('SonarScan') {
    withSonarQubeEnv(credentialsId: 'SatyaSaiPavanKumar'){
      withMaven(jdk: 'Java', maven: 'Maven'){
-    //  sh 'mvn clean package sonar:sonar' 
+     sh 'mvn clean verify sonar:sonar' 
   // sh ' mvn clean package -DskipTests -f pom.xml sonar:sonar '+
              ' -Dsonar.host.url=https://sonarcloud.io ' +
              ' -Dsonar.organization=redmonsters '  + 
