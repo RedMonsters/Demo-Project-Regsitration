@@ -13,7 +13,7 @@ EXPOSE 8000
 ENV NAME RedMonsters
 
 #When you launch the container, it runs the script and then exits
-#ENTRYPOINT ["newrelic-admin", "run-program"]
+#ENTRYPOINT ["", ""]
 
 # Run app.py when the container launches
 CMD ["java -jar", "wget https://satyasaipavan.jfrog.io/satyasaipavan/webapp/#/artifacts/browse/tree/General/libs-snapshot-local/com/hellokoding/account/1.0-SNAPSHOT/account-1.0-20191003.122515-2.jar"]
