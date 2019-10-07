@@ -1,19 +1,18 @@
-# Use an official Python runtime as a parent image
-FROM wget https://satyasaipavan.jfrog.io/satyasaipavan/webapp/#/artifacts/browse/tree/General/libs-snapshot-local/com/hellokoding/account/1.0-SNAPSHOT/account-1.0-20191003.122515-2.jar
+FROM  Ubuntu:14.04
 
-MAINTAINER satyasaipavan
+MAINTAINER  satyasaipavan
 
-# Install python newrelic agent on this docker image
-#RUN pip install newrelic ( to avoid this layer, added newrelic inside requirement.txt)
+RUN sudo apt-get update
 
-# Make port 80 available to the world outside this container
+RUN sudo apt-get install default-jdk -y
+
+RUN sudo chmod 777 /etc/environment
+
+RUN vim /etc/environment > JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+
+CMD /bin/bash
+
+CMD wget {https://satyasaipavan.jfrog.io/satyasaipavan/webapp/#/artifacts/browse/tree/General/libs-snapshot-local/com/hellokoding/account/1.0-SNAPSHOT/account-1.0-20191003.121659-1.jar}
+
 EXPOSE 8000
 
-# Define environment variable
-ENV NAME RedMonsters
-
-#When you launch the container, it runs the script and then exits
-#ENTRYPOINT ["", ""]
-
-# Run app.py when the container launches
-CMD ["java -jar", "wget https://satyasaipavan.jfrog.io/satyasaipavan/webapp/#/artifacts/browse/tree/General/libs-snapshot-local/com/hellokoding/account/1.0-SNAPSHOT/account-1.0-20191003.122515-2.jar"]
