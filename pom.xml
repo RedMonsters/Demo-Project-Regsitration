@@ -291,7 +291,7 @@
                     <manifest>
                       <addClasspath>true</addClasspath>
                       <classpathPrefix>lib/</classpathPrefix>
-                      <mainClass>com.hellokoding.account.model</mainClass>
+                      <mainClass>com.hellokoding.account</mainClass>
                     </manifest>
                   </archive>
                 </configuration>
