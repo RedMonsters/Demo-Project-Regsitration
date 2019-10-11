@@ -62,7 +62,6 @@ node {
     stage ('Publish build info') {
         server.publishBuildInfo buildInfo
     }
-}  
     
   stage('Docker Build') {
    def app = docker.build "satyasaipavan/registration"     
