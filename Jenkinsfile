@@ -68,7 +68,7 @@ node {
 }
   
  stage('push DockerImage to Hub') {
-     withDockerRegistry(credentialsId: 'Docker-hub', toolName: 'Docker', url: 'https://cloud.docker.com'){
+    withDockerRegistry(credentialsId: 'DockerHub', toolName: 'Docker', url: 'https://hub.docker.com/') {
          add.push("${env.BUILD_NUMBER}")
         add.push("latest")
       }
