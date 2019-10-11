@@ -283,15 +283,38 @@
               </plugin> 
               
               <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.0</version>
+                <executions>
+                  <execution>
+                    <phase>package</phase>
+                    <goals>
+                      <goal>shade</goal>
+                    </goals>
+                    <configuration>
+                      <transformers>
+                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                          <mainClass>org.lazydevs.veetle.api.VeetleAPI</mainClass>
+                        </transformer>
+                      </transformers>
+                    </configuration>
+                  </execution>
+                </executions>
+              </plugin>
+ 
+              <plugin>
                  <groupId>org.springframework.boot</groupId> 
                  <artifactId>spring-boot-maven-plugin</artifactId>
                  <version>2.1.0</version>
               </plugin>
+              
               <plugin>
                   <groupId>org.sonarsource.scanner.maven</groupId>
                   <artifactId>sonar-maven-plugin</artifactId>
                   <version>3.6.0.1398</version>
               </plugin> 
+            
               <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
