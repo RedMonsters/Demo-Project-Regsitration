@@ -64,7 +64,7 @@ node {
     }
     
   stage('Docker Build') {
-    app = docker.build "satyasaipavan/registration"     
+    app = docker.build("satyasaipavan/registration")     
 }
   
  stage('push DockerImage to Hub') {
