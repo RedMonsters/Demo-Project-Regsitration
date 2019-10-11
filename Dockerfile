@@ -1,18 +1,7 @@
-FROM  ubuntu:14.04
+FROM openjdk:11
 
-MAINTAINER  satyasaipavan
+WORKDIR /opt/Docker
 
-RUN sudo apt-get update
+copy /var/lib/jenkins/workspace/Registration/target/account-1.0-SNAPSHOT.jar /Registration.jar
 
-RUN sudo apt-get install default-jdk -y
-
-RUN sudo chmod 777 /etc/environment
-
-RUN vim /etc/environment > JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
-
-CMD /bin/bash
-
-CMD wget {https://satyasaipavan.jfrog.io/satyasaipavan/webapp/#/artifacts/browse/tree/General/libs-snapshot-local/com/hellokoding/account/1.0-SNAPSHOT/account-1.0-20191003.121659-1.jar}
-
-EXPOSE 8000
-
+CMD ["java" , "-jar" , "/Registration.jar"]
