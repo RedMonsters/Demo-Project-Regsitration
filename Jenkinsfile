@@ -2,6 +2,7 @@ node {
    def server = Artifactory.server('satyasaipavan.jfrog.io')
    def buildInfo = Artifactory.newBuildInfo()
    def rtMaven = Artifactory.newMavenBuild()
+   def app
   
  stage('Code checkout') {
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'gitcred', url: 'https://github.com/RedMonsters/registration-login-spring-xml-maven-jsp-mysql.git']]])          
@@ -63,17 +64,17 @@ node {
     }
 }  
     
-//   stage('Docker Build') {
- //     def app = docker.build "satyasaipavan/Registration"     
- //  }
+  stage('Docker Build') {
+   def app = docker.build "satyasaipavan/registration"     
+}
   
- //  stage('push DockerImage to Hub') {
- //        withDockerRegistry(credentialsId: 'Docker-hub', toolName: 'Docker', url: 'https://cloud.docker.com'){
- //           add.push("${env.BUILD_NUMBER}")
-  //          add.push("latest")
-//         }
- //     }
- //  }
+ stage('push DockerImage to Hub') {
+     withDockerRegistry(credentialsId: 'Docker-hub', toolName: 'Docker', url: 'https://cloud.docker.com'){
+         add.push("${env.BUILD_NUMBER}")
+        add.push("latest")
+      }
+   }
+ }
  //  stage('Deploy to Dev') {
      
    //}
