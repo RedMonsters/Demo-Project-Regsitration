@@ -69,9 +69,7 @@ node {
   
  stage('push DockerImage to Hub') {
     withDockerRegistry(credentialsId: 'DockerHub', toolName: 'Docker', url: 'https://docker.io') {
-      script {
           docker.build app + ":$BUILD_NUMBER"
-        }
       }
    }
  }
