@@ -74,7 +74,7 @@ node {
       }
    }
   stage("App deployment started"){
-     sh 'oc login --token=OIjeLO0XoCyGMC3bxFtk8LIfbpOhUL_lW4mhMKN8xNI --server=https://api.us-west-1.starter.openshift-online.com:6443'
+     sh 'oc login --token=3dUTKRWKa7KKgxN-al-sj9s56BQ04O_5pYkh7ZdXRr4 --server=https://api.us-west-1.starter.openshift-online.com:6443'
      sh 'oc project Redmonsters'
      sh 'oc new-app --name demoregistration satyasaipavan/accountregistration' 
      sh 'oc expose svc demoregistration' 
