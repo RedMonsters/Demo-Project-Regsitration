@@ -69,7 +69,9 @@ node {
   
  stage('push DockerImage to Hub') {
     withDockerRegistry(credentialsId: 'DockerHub', toolName: 'Docker', url: 'https://docker.io') {
-       sh label: '', script: 'docker push satyasaipavan/registration:latest'
+      script {
+          docker.build app + ":$BUILD_NUMBER"
+        }
       }
    }
  }
