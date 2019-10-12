@@ -69,7 +69,7 @@ node {
   
  stage('push DockerImage to Hub') {
     withDockerRegistry(credentialsId: 'DOCKERHUB', url: 'https://docker.io') {
-         app.push("${env.BUILD_NUMBER}")
+         app.push('latest')
       }
    }
  }
