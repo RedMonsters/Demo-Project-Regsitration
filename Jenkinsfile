@@ -64,13 +64,13 @@ node {
     }
     
   stage('Docker Build') {
-    app = docker.build("satyasaipavan/registration")     
+    app = docker.build("satyasaipavan/accountregistration")     
 }
   
  stage('push DockerImage to Hub') {
     withDockerRegistry(credentialsId: 'DOCKERHUB', url: 'https://docker.io') {
-          sh 'docker tag satyasaipavan/registration satyasaipavan/registration:latest'
-          sh 'docker push satyasaipavan/registration:latest'
+          sh 'docker tag satyasaipavan/accountregistration satyasaipavan/accountregistration:lts'
+          sh 'docker push docker push satyasaipavan/accountregistration:lts'
       }
    }
  }
