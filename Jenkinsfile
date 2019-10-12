@@ -68,8 +68,8 @@ node {
 }
   
  stage('push DockerImage to Hub') {
-    withDockerRegistry(credentialsId: 'DockerHub', toolName: 'Docker', url: 'https://hub.docker.com') {
-         sh 'docker push satyasaipavan/registration:lts'
+    withDockerRegistry(credentialsId: 'DOCKERHUB', url: 'https://hub.docker.com/') {
+         app.push("${env.BUILD_NUMBER}")
       }
    }
  }
