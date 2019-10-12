@@ -69,7 +69,7 @@ node {
   
  stage('push DockerImage to Hub') {
     withDockerRegistry(credentialsId: 'DockerHub', toolName: 'Docker', url: 'https://docker.io') {
-         sh 'docker push satyasaipavan/registration'
+         sh 'docker push satyasaipavan/registration:lts'
       }
    }
  }
