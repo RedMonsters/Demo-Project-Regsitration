@@ -75,7 +75,6 @@ node {
    }
   stage("App deployment started"){
      sh 'oc login --token=9HibyU9xjhJWSokMczF1puhX80QTaEFLEMwIvFmMNf4 --server=https://api.us-west-1.starter.openshift-online.com:6443'
-     sh 'oc new-project registration'
      sh 'oc new-app --name registration satyasaipavan/accountregistration:latest' 
     }
  }
