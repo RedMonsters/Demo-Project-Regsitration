@@ -32,6 +32,7 @@ stage('SonarScan') {
              ' -Dsonar.login=cbfc4af672bbcfa48b32ccab611f725c8105e082 ' +
             ' -Dsonar.projectKey=redmonsters ' +
           ' -Dsonar.links.ci='
+         ' -Dsonar.ws.timeout=20 '
            }
        }
  }
