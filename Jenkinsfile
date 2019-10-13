@@ -70,7 +70,7 @@ node {
  stage('push DockerImage to Hub') {
     withDockerRegistry(credentialsId: 'DOCKERHUB', url: 'https://index.docker.io/v1/') {
           sh 'docker tag satyasaipavan/accountregistration satyasaipavan/accountregistration:latest'
-          sh 'docker push satyasaipavan/accountregistration:latest'
+          sh 'docker push satyasaipavan/accountregistration'
       }
    }
   stage("App deployment started"){
