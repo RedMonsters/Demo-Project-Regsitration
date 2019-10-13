@@ -22,19 +22,19 @@ node {
         rtMaven.tool = 'Maven' // Tool name from Jenkins configuration
         rtMaven.run pom: 'pom.xml', goals: 'clean compile test'
     }
-//stage('SonarScan') {
-   //  withSonarQubeEnv(credentialsId: 'SatyaSaiPavanKumar'){
-       //  withMaven(jdk: 'Java', maven: 'Maven') {
-           //  sh 'mvn clean package sonar:sonar' 
+stage('SonarScan') {
+  withSonarQubeEnv(credentialsId: 'SatyaSaiPavanKumar'){
+      withMaven(jdk: 'Java', maven: 'Maven') {
+         sh 'mvn clean package sonar:sonar' 
            //  sh 'mvn clean verify sonar:sonar ' +
-           //  ' -Dsonar.host.url=https://sonarcloud.io ' +
-            // ' -Dsonar.organization=redmonsters '  + 
-           //  ' -Dsonar.login=c12567b670f2e3d95752ed609ad85a0455aa927e ' +
-           //  ' -Dsonar.projectKey=redmonsters ' +
-           //  ' -Dsonar.links.ci='
-        //    }
-       // }
-  // }
+       ' -Dsonar.host.url=https://sonarcloud.io ' +
+             ' -Dsonar.organization=redmonsters '  + 
+             ' -Dsonar.login=cbfc4af672bbcfa48b32ccab611f725c8105e082 ' +
+            ' -Dsonar.projectKey=redmonsters ' +
+          ' -Dsonar.links.ci='
+           }
+       }
+ }
 
   stage('Package') {
     withMaven(jdk: 'Java', maven: 'Maven') {
