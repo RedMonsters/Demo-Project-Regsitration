@@ -1,0 +1,11 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 12 19:15:17 UTC 2019
+@default-central-https\://ajitkatta.jfrog.io/ajitkatta/libs-release/.lastUpdated=1570054604207
+https\://repo.maven.apache.org/maven2/.lastUpdated=1576178117297
+https\://satyasaipavan.jfrog.io/satyasaipavan/libs-release/.error=Could not transfer artifact org.apache.maven.wagon\:wagon-ssh\:pom\:1.0-beta-2 from/to central (https\://satyasaipavan.jfrog.io/satyasaipavan/libs-release)\: Access denied to\: https\://satyasaipavan.jfrog.io/satyasaipavan/libs-release/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2.pom , ReasonPhrase\:Forbidden.
+https\://ajitkatta.jfrog.io/ajitkatta/libs-snapshot/.error=Could not transfer artifact org.apache.maven.wagon\:wagon-ssh\:pom\:1.0-beta-2 from/to snapshots (https\://ajitkatta.jfrog.io/ajitkatta/libs-snapshot)\: Not authorized , ReasonPhrase\:Unauthorized.
+@default-snapshots-https\://ajitkatta.jfrog.io/ajitkatta/libs-snapshot/.lastUpdated=1570054604283
+@default-snapshots-https\://satyasaipavan.jfrog.io/satyasaipavan/libs-snapshot/.lastUpdated=1576178020638
+https\://satyasaipavan.jfrog.io/satyasaipavan/libs-snapshot/.error=Could not transfer artifact org.apache.maven.wagon\:wagon-ssh\:pom\:1.0-beta-2 from/to snapshots (https\://satyasaipavan.jfrog.io/satyasaipavan/libs-snapshot)\: Access denied to\: https\://satyasaipavan.jfrog.io/satyasaipavan/libs-snapshot/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2.pom , ReasonPhrase\:Forbidden.
+https\://ajitkatta.jfrog.io/ajitkatta/libs-release/.error=Could not transfer artifact org.apache.maven.wagon\:wagon-ssh\:pom\:1.0-beta-2 from/to central (https\://ajitkatta.jfrog.io/ajitkatta/libs-release)\: Not authorized , ReasonPhrase\:Unauthorized.
+@default-central-https\://satyasaipavan.jfrog.io/satyasaipavan/libs-release/.lastUpdated=1576178020485

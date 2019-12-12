@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Sep 29 05:39:03 UTC 2019
+build-helper-maven-plugin-1.10.jar>spring-releases=
+build-helper-maven-plugin-1.10.pom>spring-releases=

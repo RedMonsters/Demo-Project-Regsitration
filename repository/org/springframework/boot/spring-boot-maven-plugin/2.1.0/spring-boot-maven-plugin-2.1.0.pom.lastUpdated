@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Oct 13 07:46:52 UTC 2019
+@default-snapshots-https\://satyasaipavan.jfrog.io/satyasaipavan/libs-snapshot/.lastUpdated=1570952812920
+https\://satyasaipavan.jfrog.io/satyasaipavan/libs-release/.error=Could not transfer artifact org.springframework.boot\:spring-boot-maven-plugin\:pom\:2.1.0 from/to central (https\://satyasaipavan.jfrog.io/satyasaipavan/libs-release)\: Not authorized
+@default-central-https\://satyasaipavan.jfrog.io/satyasaipavan/libs-release/.lastUpdated=1570952812805
+https\://satyasaipavan.jfrog.io/satyasaipavan/libs-snapshot/.error=Could not transfer artifact org.springframework.boot\:spring-boot-maven-plugin\:pom\:2.1.0 from/to snapshots (https\://satyasaipavan.jfrog.io/satyasaipavan/libs-snapshot)\: Not authorized

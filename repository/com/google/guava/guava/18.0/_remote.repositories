@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Oct 02 20:54:05 UTC 2019
+guava-18.0.pom>central=
+guava-18.0.pom>spring-releases=
+guava-18.0.pom>artifactory-release=
+guava-18.0.jar>spring-releases=
+guava-18.0.jar>central=
