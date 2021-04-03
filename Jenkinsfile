@@ -18,10 +18,10 @@ node {
     //}  
  //} 
    
- stage ('Unit Test') {
-        rtMaven.tool = 'Maven' // Tool name from Jenkins configuration
-        rtMaven.run pom: 'pom.xml', goals: 'clean compile test'
-    }
+// stage ('Unit Test') {
+ //       rtMaven.tool = 'Maven' // Tool name from Jenkins configuration
+   //     rtMaven.run pom: 'pom.xml', goals: 'clean compile test'
+    //}
 //stage('SonarScan') {
  // withSonarQubeEnv(credentialsId: 'SatyaSaiPavanKumar'){
       //withMaven(jdk: 'Java', maven: 'Maven') {
