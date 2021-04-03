@@ -37,9 +37,10 @@ node {
       // }
 // }
 
-  stage('Package') {
+  stage('Package and run') {
     withMaven(jdk: 'Java', maven: 'Maven') {
       sh 'mvn package'
+      sh 'mvn jetty:run'
      } 
   }
  //stage ('Artifactory') {
