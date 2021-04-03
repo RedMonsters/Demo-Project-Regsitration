@@ -134,11 +134,11 @@
              <version>3.6.0</version>
         </dependency>
         
-        <dependency>
+        <!--<dependency>
              <groupId>org.jfrog.buildinfo</groupId>
              <artifactId>artifactory-maven-plugin</artifactId>
              <version>2.6.1</version>
-        </dependency>
+        </dependency>-->
         
         <dependency>
              <groupId>org.apache.maven.plugins</groupId>
@@ -148,7 +148,7 @@
                        
      </dependencies>
      
-     <distributionManagement>
+     <!--distributionManagement>
        <repository>
         <id>central</id>
         <name>satyasaipavan-artifactory-primary-0-releases</name>
@@ -159,7 +159,7 @@
         <name>satyasaipavan-artifactory-primary-0-snapshots</name>
         <url>https://satyasaipavan.jfrog.io/satyasaipavan/libs-snapshot</url>
       </snapshotRepository>
-     </distributionManagement>
+     </distributionManagement>-->
          
     <build>
         <defaultGoal>install</defaultGoal>
@@ -208,7 +208,7 @@
                   <artifactId>maven-jar-plugin</artifactId>
                   <version>3.1.2</version>
               </plugin>
-              <plugin>
+              <!--<plugin>
                   <groupId>org.jfrog.buildinfo</groupId>
                   <artifactId>artifactory-maven-plugin</artifactId>
                   <version>2.6.1</version>
@@ -235,7 +235,7 @@
                      </execution>
                   </executions>
                </plugin>           
-          </plugins>    
+          </plugins>-->    
         </pluginManagement>
               
         <plugins>
@@ -317,7 +317,7 @@
             </plugin>
           </plugins>
       </build>
-      <repositories>
+      <!--<repositories>
         <repository>
           <snapshots>
             <enabled>false</enabled>
@@ -348,6 +348,6 @@
           <name>libs-snapshot</name>
           <url>https://satyasaipavan.jfrog.io/satyasaipavan/libs-snapshot</url>
         </pluginRepository>
-      </pluginRepositories>
+      </pluginRepositories>-->
       
   </project>
