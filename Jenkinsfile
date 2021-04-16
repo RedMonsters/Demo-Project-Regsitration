@@ -12,11 +12,11 @@ node {
       sh 'mvn clean compile'
      } 
  }
-// stage('Test') {
-  // withMaven(jdk: 'Java', maven: 'Maven') {
-    // sh 'mvn test'
-    //}  
- //} 
+ stage('Test') {
+   withMaven(jdk: 'Java', maven: 'Maven') {
+     sh 'mvn test'
+    }  
+ } 
    
 // stage ('Unit Test') {
  //       rtMaven.tool = 'Maven' // Tool name from Jenkins configuration
